@@ -2,15 +2,33 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="WeatherClient\src\app\constants.ts" />
+    <None Remove="WeatherClient\src\app\shared\models\city.ts" />
+    <None Remove="WeatherClient\src\app\shared\models\country.ts" />
+    <None Remove="WeatherClient\src\app\shared\models\current-conditions.ts" />
+    <None Remove="WeatherClient\src\app\shared\models\weather.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="WeatherClient\src\app\shared\services\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="WeatherClient\src\app\constants.ts" />
+    <TypeScriptCompile Include="WeatherClient\src\app\shared\models\city.ts" />
+    <TypeScriptCompile Include="WeatherClient\src\app\shared\models\country.ts" />
+    <TypeScriptCompile Include="WeatherClient\src\app\shared\models\current-conditions.ts" />
+    <TypeScriptCompile Include="WeatherClient\src\app\shared\models\weather.ts" />
   </ItemGroup>
 
 </Project>
